@@ -41,3 +41,8 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v3
+      - name: send default message
+        uses: louis70109/line-notify-action@master
+        with:
+          token: ${{ secrets.LINE_NOTIFY_TOKEN }}
+          message: 'Help me buy is deployed.'
